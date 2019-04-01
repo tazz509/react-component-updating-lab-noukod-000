@@ -4,7 +4,7 @@ class Timer extends Component {
 
   constructor() {
     super()
-    this.timer = React.createRef() 
+    this.timer = React.createRef()
     this.state = {
         time: 0,
         color: '#'+Math.floor(Math.random()*16777215).toString(16),
@@ -18,11 +18,11 @@ class Timer extends Component {
     "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
 
-  shouldComponentUpdate(nextProps, nextState) { 
+  shouldComponentUpdate(nextProps, nextState) {
       if (this.state.time === nextState.time) {
         return false
       }
-      return true 
+      return true
     }
 
 
