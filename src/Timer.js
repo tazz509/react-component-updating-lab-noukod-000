@@ -4,7 +4,7 @@ class Timer extends Component {
 
   constructor() {
     super()
-    this.timer = React.createRef() //allows us to access this sections dom
+    this.timer = React.createRef() 
     this.state = {
         time: 0,
         color: '#'+Math.floor(Math.random()*16777215).toString(16),
@@ -18,11 +18,11 @@ class Timer extends Component {
     "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
 
-  shouldComponentUpdate(nextProps, nextState) { //fires just before component commits to updating
+  shouldComponentUpdate(nextProps, nextState) { 
       if (this.state.time === nextState.time) {
         return false
       }
-      return true //component will only update if this returns true
+      return true 
     }
 
 
@@ -60,7 +60,7 @@ class Timer extends Component {
     this.setState({className: "hidden"})
   }
 
-  // for the 'x' button,
+  
   handleClose = () => {
     this.props.removeTimer(this.props.id)
   }
